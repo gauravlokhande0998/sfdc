@@ -1,0 +1,94 @@
+<template>
+    <template if:false={loading}>
+        <template if:false={submitted}>
+            <template if:false={isDesktop}>
+                <div style="background-color: white;">
+                    <div class="slds-contact-heading slds-text-align_center slds-p-top_large slds-p-right_medium slds-p-left_medium">
+                        Contact Us
+                    </div><br>
+                    <div class="slds-contact-body slds-text-align_center" style="background-color: darkblue; color: white;">
+                        <div>
+                            <p class="slds-p-top_medium slds-p-bottom_small">Name<abbr title="required" class="slds-required-input">*</abbr></p>
+                            <input class="slds-align_absolute-center slds-input" type="text" onchange={nameChangeHandler} value={name}></input><br>
+                            <p class="slds-p-bottom_small">Phone</p>
+                            <input class="slds-align_absolute-center slds-input" type="text" onchange={phoneChangeHandler} value={phone}></input><br>
+                            <p class="slds-p-bottom_small">Email<abbr title="required" class="slds-required-input">*</abbr></p>
+                            <input class="slds-align_absolute-center slds-input" type="text" onchange={emailChangeHandler} value={email}></input><br>
+                            <p class="slds-p-bottom_small">Message<abbr title="required" class="slds-required-input">*</abbr></p>
+                            <textarea class="slds-align_absolute-center slds-input" onchange={messageChangeHandler}></textarea><br>
+                        </div>
+                    </div>
+                    <div class="slds-contact-body slds-align_absolute-center slds-p-bottom_medium" style="background-color: darkblue;">
+                        <button class="slds-submit-button" onclick={submitHandler}>SUBMIT</button><br>
+                    </div>
+                </div>
+            </template>
+            <template if:true={isDesktop}>
+                <div style="background-color: white;">
+                    <div class="slds-contact-heading-desktop slds-text-align_center slds-p-top_large">
+                        Contact Us
+                    </div><br><br>
+                    <lightning-layout>
+                        <lightning-layout-item size="2"></lightning-layout-item>
+                        <lightning-layout-item size="8">
+                            <div class="slds-contact-body-desktop slds-text-align_center" style="background-color: darkblue; color: white;"><br>
+                                <div>
+                                    <p class="slds-p-top_medium slds-p-bottom_small">Name<abbr title="required" class="slds-required-input">*</abbr></p>
+                                    <input class="slds-align_absolute-center slds-input slds-input-desktop" type="text" onchange={nameChangeHandler} value={name}></input><br>
+                                    <p class="slds-p-bottom_small">Phone</p>
+                                    <input class="slds-align_absolute-center slds-input slds-input-desktop" type="text" onchange={phoneChangeHandler} value={phone}></input><br>
+                                    <p class="slds-p-bottom_small">Email<abbr title="required" class="slds-required-input">*</abbr></p>
+                                    <input class="slds-align_absolute-center slds-input slds-input-desktop" type="text" onchange={emailChangeHandler} value={email}></input><br>
+                                    <p class="slds-p-bottom_small">Message<abbr title="required" class="slds-required-input">*</abbr></p>
+                                    <textarea class="slds-align_absolute-center slds-input slds-textarea-desktop" onchange={messageChangeHandler}></textarea><br>
+                                </div>
+                            </div>
+                            <div class="slds-contact-body-desktop slds-align_absolute-center slds-p-bottom_medium" style="background-color: darkblue;">
+                                <button class="slds-submit-button-desktop" onclick={submitHandler}>SUBMIT</button><br><br><br>
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="2"></lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </template>
+        </template>
+        <template if:true={showModal}>
+            <section aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container ">
+                    <header class="slds-modal__header">
+                        <h2 class="slds-text-heading_small">{modalHeader}</h2>
+                        <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={closeModal}></lightning-icon>
+                    </header>
+                    <div class="slds-modal__content slds-text-align_center">
+                        <div class="slds-p-around_small slds-modal-error">
+                            <p>{modalBody}</p>
+                        </div>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning-button variant="brand" label={modalButtonLabel} onclick={closeModal} class="slds-p-around_x-small slds-align_absolute-center" style="font-weight: bold"></lightning-button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+        <div style="background-color: white;"><br><br><br></div>
+        <template if:true={responseAlreadySubmitted}>
+            <div style="background-color: white;"><br></div>
+            <div style="background-color:  rgb(230, 250, 255);"><br><br></div>
+            <div style="background-color: rgb(230, 250, 255);">
+                <div class={sldsContactResponse}>
+                    Your response has been submitted already for the day, We will get in touch with you shortly !!
+                </div><br><br>
+            </div>
+        </template>
+        <template if:true={responseSubmitted}>
+            <div style="background-color:  rgb(230, 250, 255);"><br><br></div>
+            <div style="background-color: rgb(230, 250, 255);">
+                <div class={sldsContactResponse}>
+                    Thanks for contacting us! We will get in touch with you shortly.
+                </div><br><br>
+            </div>
+        </template>
+        <div style="background-color: white;"><br><br></div>
+    </template>
+</template>
