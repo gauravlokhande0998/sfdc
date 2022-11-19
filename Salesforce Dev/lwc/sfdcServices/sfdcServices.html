@@ -1,0 +1,152 @@
+<template>
+    <template if:false={isDesktop}>
+        <div style="background-color: white;"><br><br></div>
+        <div class="slds-p-left_large" style="background-color:  rgb(18, 17, 17);">
+            <br>
+            <lightning-layout class="slds-services-heading">
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center" padding="around-small">
+                    <b>Best Vehicle <span style="color: rgb(255, 170, 10)">Cleaning Services</span></b>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div class="slds-services-message slds-p-left_small slds-p-right_small slds-border-bottom">
+            <br>
+            With five different levels of washes, there is sure to be one that fits the needs of your vehicle and how you want it to look.
+            Our washes are backed by innovative technology and the latest in cleaning, shining and drying practices.
+            <br><br>
+        </div>
+        <div class="slds-border-bottom slds-p-left_x-small slds-p-right_x-small" style="background-color: white;">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="5" class="slds-services-image">
+                    <img src={vaccumClean}>
+                </lightning-layout-item>
+                <lightning-layout-item size="7" class="slds-p-left_medium slds-p-top_medium">
+                    <p class="slds-service-type-heading">Vaccum Cleaning</p><br>
+                    <p class="slds-services-type-message">We provide interior vaccum cleaning of your vehicle.</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div class="slds-border-bottom slds-p-left_x-small slds-p-right_x-small" style="background-color: white;">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="5" class="slds-services-image">
+                    <img src={softWash}>
+                </lightning-layout-item>
+                <lightning-layout-item size="7" class="slds-p-left_medium slds-p-top_medium">
+                    <p class="slds-service-type-heading">Soft Wash</p><br>
+                    <p class="slds-services-type-message">Soft Wash will eliminates contaminants off the exterior of your car!!</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div class="slds-border-bottom slds-p-left_x-small slds-p-right_x-small" style="background-color: white;">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="5" class="slds-services-image">
+                    <img src={tyrePolish}>
+                </lightning-layout-item>
+                <lightning-layout-item size="7" class="slds-p-left_medium slds-p-top_medium">
+                    <p class="slds-service-type-heading">Tyre Polish</p><br>
+                    <p class="slds-services-type-message">We ensure to provide a rich and glossy finish using tyre polish!!</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div class="slds-border-bottom slds-p-left_x-small slds-p-right_x-small" style="background-color: white;">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="5" class="slds-services-image">
+                    <img src={foamWash}>
+                </lightning-layout-item>
+                <lightning-layout-item size="7" class="slds-p-left_medium slds-p-top_medium">
+                    <p class="slds-service-type-heading">Foam Wash</p><br>
+                    <p class="slds-services-type-message">We provide foam wash to achieve a safer and more effective cleaning result.</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div class="slds-border-bottom slds-p-left_x-small slds-p-right_x-small" style="background-color: white;">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="5" class="slds-services-image">
+                    <img src={dashboardPolish}>
+                </lightning-layout-item>
+                <lightning-layout-item size="7" class="slds-p-left_medium slds-p-top_medium">
+                    <p class="slds-service-type-heading">Dashboard Polish</p><br>
+                    <p class="slds-services-type-message">Beautifies dashboard of your vehicle.</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+    </template>
+    <template if:true={isDesktop}>
+        <div style="background-color: white;"><br><br></div>
+        <div class="slds-p-left_large" style="background-color:  rgb(18, 17, 17);">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="4"></lightning-layout-item>
+                <lightning-layout-item size="8" padding="around-small" class="slds-services-heading-desktop">
+                    <b class="slds-p-left_medium">Best Vehicle <span style="color: rgb(255, 170, 10)">Cleaning Services</span></b>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div style="background-color: white;"><br><br><br>
+            <lightning-layout>
+                <lightning-layout-item size="5" class="slds-services-image-desktop slds-align_absolute-center">
+                    <img src={vaccumClean}>
+                </lightning-layout-item>
+                <lightning-layout-item size="1" class="slds-border-right-desktop"></lightning-layout-item>
+                <lightning-layout-item size="1"></lightning-layout-item>
+                <lightning-layout-item size="5" class="slds-services-image-desktop slds-align_absolute-center">
+                    <img src={softWash}>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout class="slds-text-align_center">
+                <lightning-layout-item size="5">
+                    <br><p class="slds-service-type-heading-desktop">Vaccum Cleaning</p><br>
+                    <p class="slds-services-type-message-desktop">We provide interior vaccum cleaning <br> of your vehicle.</p><br><br><br>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-border-right-desktop" flexibility="auto"></lightning-layout-item>
+                <lightning-layout-item size="1"></lightning-layout-item>
+                <lightning-layout-item size="5">
+                    <br><p class="slds-service-type-heading-desktop">Soft Wash</p><br>
+                    <p class="slds-services-type-message-desktop">Soft Wash will eliminates contaminants <br> off the exterior of your car!!</p><br><br><br>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="5" class="slds-services-image-desktop slds-align_absolute-center">
+                    <img src={tyrePolish}>
+                </lightning-layout-item>
+                <lightning-layout-item size="1" class="slds-border-right-desktop"></lightning-layout-item>
+                <lightning-layout-item size="1"></lightning-layout-item>
+                <lightning-layout-item size="5" class="slds-services-image-desktop slds-align_absolute-center">
+                    <img src={foamWash}>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout class="slds-text-align_center">
+                <lightning-layout-item flexibility="auto">
+                    <br><p class="slds-service-type-heading-desktop">Tyre Polish</p><br>
+                    <p class="slds-services-type-message-desktop">We ensure to provide a rich and <br> glossy finish using tyre polish!!</p><br><br><br>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-border-right-desktop" flexibility="auto"></lightning-layout-item>
+                <lightning-layout-item size="1"></lightning-layout-item>
+                <lightning-layout-item size="5">
+                    <br><p class="slds-service-type-heading-desktop">Foam Wash</p><br>
+                    <p class="slds-services-type-message-desktop">We provide foam wash to achieve <br> a safer and more effective cleaning result.</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br><br><br><br>
+            <div class="slds-align_absolute-center slds-services-image-desktop">
+                <img src={dashboardPolish}>
+            </div><br>
+            <div class="slds-text-align_center">
+                <p class="slds-service-type-heading-desktop">Dashboard Polish</p><br>
+                <p class="slds-services-type-message-desktop">Beautifies dashboard of your vehicle.</p>
+            </div><br>
+        </div>
+    </template>
+</template>
