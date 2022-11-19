@@ -1,0 +1,14 @@
+.slds-footer-container-mobile{
+    font-family: "Segoe UI", Candara, "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif; 
+    background-color: rgb(0, 0, 77);
+    color: white;
+    font-weight : bolder;
+    font-size: 4vw;
+}
+.slds-footer-container{
+    font-family: "Segoe UI", Candara, "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif; 
+    background-color: rgb(0, 0, 77);
+    color: white;
+    font-weight : bolder;
+    font-size: 20px;
+}
