@@ -1,0 +1,72 @@
+<template>
+    <template if:true={isDesktop}>
+        <div class="slds-box slds-p-around_none slds-m-horizontal_none">
+            <lightning-layout class="slds-header slds-header-border-desktop" style="font-weight: bold; font-size: 18px;">
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center" padding="around-small" style="max-width: 110px; max-height: 110px;">
+                    <img src={morayaLogo}>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center" padding="around-small">
+                    <button class={menu_button_home} onclick={buttonClickHandler}>HOME</button>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center" padding="around-small">
+                    <button class={menu_button_services} onclick={buttonClickHandler}>SERVICES</button>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center" padding="around-small">
+                    <button class={menu_button_about} onclick={buttonClickHandler}>ABOUT US</button>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center" padding="around-small">
+                    <button class={menu_button_contact} onclick={buttonClickHandler}>CONTACT US</button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </template>
+    <template if:false={isDesktop}>
+        <div>
+            <lightning-layout class="slds-header slds-header-border">
+                <lightning-layout-item size="3" class="slds-align_absolute-center"  padding="around-small">
+                    <img style="height:20vw;" src={morayaLogo}>
+                </lightning-layout-item>
+                <lightning-layout-item size="7" flexibility="auto" class="slds-align_absolute-center slds-heading-text slds-text-align_center">
+                   <p style="font-size:4.5vw;">MORAYA WASHING <br> CENTER</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" flexibility="auto" class="slds-align_absolute-center" padding="around-small">
+                    <button class="slds-header" onclick={menuClickHandler}>
+                        <div class="menu slds-m-bottom_xx-small"></div>
+                        <div class="menu slds-m-bottom_xx-small"></div>
+                        <div class="menu"></div>
+                        <div class="menu slds-m-top_xx-small"></div>
+                    </button>
+                </lightning-layout-item>
+            </lightning-layout>
+            <template if:true={isMenuClicked}>
+                <div class="slds-menu">
+                    <br>
+                    <div>
+                        <button class={menu_button_home} onclick={buttonClickHandler}>HOME</button>
+                    </div><br>
+                    <div>
+                        <button class={menu_button_services} onclick={buttonClickHandler}>SERVICES</button>
+                    </div><br>
+                    <div>
+                        <button class={menu_button_about} onclick={buttonClickHandler}>ABOUT US</button>
+                    </div><br>
+                    <div>
+                        <button class={menu_button_contact} onclick={buttonClickHandler}>CONTACT US</button> &emsp;
+                    </div>
+                </div>
+            </template>
+        </div>
+    </template>
+    <template if:true={isHome}>
+        <c-sfdc-home is-desktop = {isDesktop}></c-sfdc-home>
+    </template>
+    <template if:true={isServices}>
+        <c-sfdc-Services is-desktop = {isDesktop}></c-sfdc-services>
+    </template>
+    <template if:true={isAboutUs}>
+        <c-sfdc-about-us is-desktop = {isDesktop}></c-sfdc-about-us>
+    </template>
+    <template if:true={isContactUs}>
+        <c-sfdc-contact-us is-desktop = {isDesktop}></c-sfdc-contact-us>
+    </template>
+</template>
