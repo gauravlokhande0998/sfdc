@@ -1,0 +1,108 @@
+<template>
+    <template if:false={isDesktop}>
+        <div style="background-color: white;">
+            <div class="slds-about-heading slds-text-align_center slds-p-top_large slds-p-right_medium slds-p-left_medium">
+                About Us
+            </div><br>
+            <div class="slds-about-body slds-text-align_center slds-p-around_large">
+                We takes great pride in offering the highest quality wash in an environmentally 
+                safe and responsible way. Through the latest technology, equipment, we maintain the 
+                appearance of your automobile.<br>
+            </div><br>
+            <div class="slds-m-around_medium" style="border: 4px solid rgb(255, 170, 10);">
+                <lightning-layout class="slds-m-top_medium slds-m-left_medium">
+                    <lightning-layout-item size="2" class="slds-align_absolute-center">
+                        <img src={addressLogo}>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="10" class="slds-about-heading-address slds-p-left_large">
+                        Location
+                    </lightning-layout-item>
+                </lightning-layout><br>
+                <div class="slds-about-body slds-p-left_large slds-p-right_medium">
+                    Ahmednagar-Kalyan road, Nefti Phata 414005.
+                </div>
+                <br>
+            </div><br>
+            <div class="slds-m-around_medium" style="border: 4px solid rgb(255, 170, 10);">
+                <lightning-layout class="slds-m-top_medium slds-m-left_medium">
+                    <lightning-layout-item size="2" class="slds-align_absolute-center">
+                        <img src={emailLogo}>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="10" class="slds-about-heading-address slds-p-left_large">
+                        Email
+                    </lightning-layout-item>
+                </lightning-layout><br>
+                <div class="slds-about-body slds-p-left_large">
+                    morayaserviceinfo@gmail.com
+                </div>
+                <br>
+            </div><br>
+        </div>
+        <div style="background-color: rgb(230, 250, 255);">
+            <div class="slds-about-heading slds-text-align_center slds-p-top_large slds-p-right_medium slds-p-left_medium">
+                Locate Us
+            </div><br>
+            <lightning-layout class="slds-has-coordinates">
+                <lightning-layout-item size="12">
+                    <lightning-map
+                        map-markers={mapMarkers}
+                        markers-title='Moraya Hightech Washing Center'
+                        center={center}
+                        zoom-level = 12>
+                        </lightning-map>
+                </lightning-layout-item>
+            </lightning-layout>
+            <div class="slds-m-top_medium slds-p-bottom_large slds-button-body slds-align_absolute-center">
+               <a href={locationUrl}><button class="slds-map-button">Get Full Map Here</button></a><br>
+            </div>
+        </div>
+        <div style="background-color: white;"><br></div>
+    </template>
+    <template if:true={isDesktop}>
+        <div style="background-color: white;">
+            <div class="slds-about-heading-desktop slds-text-align_center slds-p-top_large">
+                About Us
+            </div><br>
+            <div class="slds-about-body-desktop slds-text-align_center slds-p-around_large">
+                We takes great pride in offering the highest quality wash in an <br>
+                environmentally safe and responsible way. Through the latest technology, <br>
+                equipment, we maintain the appearance of your automobile.<br>
+            </div><br><br>
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" style="width: 40px;"></lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    <div class="slds-address-border-desktop">
+                        <br><p class="slds-about-heading-address-desktop"><img src={addressLogo}>&ensp;&ensp;Location</p>
+                        <p class="slds-about-body-desktop">Ahmednagar-Kalyan road, Nefti Phata 414005.</p><br>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="1"></lightning-layout-item>
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center">
+                    <div class="slds-address-border-desktop">
+                        <br><p class="slds-about-heading-address-desktop"><img src={emailLogo}>&ensp;&ensp;Email</p>
+                        <p class="slds-about-body-desktop">morayaserviceinfo@gmail.com</p><br>
+                    </div>                
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto" style="width: 40px;"></lightning-layout-item>
+            </lightning-layout><br><br><br>
+            <div class="slds-about-heading-desktop slds-text-align_center slds-p-top_large">
+                Locate Us
+            </div><br>
+            <div class="slds-m-around_large" style="border: 5px solid rgb(179, 209, 255);">
+                <lightning-layout class="slds-has-coordinates">
+                    <lightning-layout-item size="12">
+                        <lightning-map
+                            map-markers={mapMarkers}
+                            markers-title='Moraya Hightech Washing Center'
+                            center={center}
+                            zoom-level = 12>
+                            </lightning-map>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <div class="slds-m-top_medium slds-p-bottom_large slds-button-body-desktop slds-align_absolute-center">
+               <a href={locationUrl}><button class="slds-map-button-desktop">Get Full Map Here</button></a><br>
+            </div>
+        </div>
+    </template>
+</template>
