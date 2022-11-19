@@ -1,0 +1,58 @@
+.slds-border-bottom{
+    border-bottom: 0.8vw solid rgb(255, 170, 10);
+}
+.slds-border-right{
+    border-right: 3px solid rgb(255, 170, 10);
+}
+.slds-home-slogan-mobile{
+    font-weight: bold;
+    font-family:georgia,serif;
+    color:white;
+}
+.slds-name-mobile{
+    font-family: "Segoe UI", Candara, "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif; 
+    font-size : 9vw;   
+    font-weight: bold;
+    color: darkblue;
+}
+.slds-name-desktop{
+    font-family: "Segoe UI", Candara, "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif; 
+    font-size : 40px;   
+    font-weight: bold;
+    color: darkblue;
+}
+.slds-body-mobile{
+    font-family: georgia,serif;
+    font-size:4.5vw;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+.slds-body-desktop{
+    font-family: georgia,serif;
+    font-size:22px;
+    font-weight: normal;
+}
+.slds-reason-heading{
+    border-left: 0.8vw solid rgb(255, 170, 10);
+    color: white;
+    font-size : 6vw;
+}
+.slds-reason-heading-desktop{
+    border-left: 4px solid rgb(255, 170, 10);
+    color: white;
+    font-size : 30px;
+}
+.slds-abstract-detail{
+    font-weight: bold;
+    font-size: 5vw;
+}
+.slds-abstract-detail-desktop{
+    font-family: georgia,serif;
+    font-size:20px;
+    font-weight: bold;
+}
+.slds-home-slogan-desktop{
+    font-weight: bold;
+    font-family:georgia,serif;
+    color:white;
+}

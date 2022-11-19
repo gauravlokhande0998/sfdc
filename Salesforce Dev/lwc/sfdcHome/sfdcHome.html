@@ -1,0 +1,178 @@
+<template>
+    <template if:false={isDesktop}>
+        <div style={backgroundStyleMobile} class="slds-align_absolute-center slds-home-slogan-mobile slds-p-left_small slds-p-right_small slds-text-align_center">
+            Spotless Shine, Every Time
+        </div>
+        <div style="background-color: white;"><br><br></div>
+        <div class="slds-p-left_small slds-p-right_small slds-border-bottom" style="background-color: white;">
+            <div class="slds-name-mobile slds-align_absolute-center slds-text-align_center">
+                Moraya Hightech <br> Washing Center
+            </div><br><br>
+            <span class="slds-body-mobile">
+                Moraya Hightech Washing Center located at Ahmednagar-Kalyan road, Nefti Phata. Our wide service offerings make your vehicle wash experience the best it can be!
+            </span><br><br>
+        </div>
+        <div style="background-color: white;">
+            <span><br><br>
+                <img style="max-width:40%;max-height:15%;" class="slds-align_absolute-center" src={vaccumLogo}>
+                <p class="slds-abstract-detail slds-align_absolute-center">Free Vacuums</p><br><br>
+                <img style="max-width:40%;max-height:15%;" class="slds-align_absolute-center" src={moistureLogo}>
+                <p class="slds-abstract-detail slds-align_absolute-center">Moisture Absorbing Towels <br> Available</p>
+            </span>
+        </div>
+        <div style="background-color: white;"><br><br></div>
+        <div class="slds-p-left_large" style="background-color:  rgb(18, 17, 17);">
+            <br>
+            <lightning-layout class="slds-reason-heading">
+                <lightning-layout-item flexibility="auto" class="slds-align_absolute-center" padding="around-small">
+                    <b>Why Our <span style="color: rgb(255, 170, 10)">Customers Love Us</span></b>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div style="background-color: white;"><br><br></div>
+        <div style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="6" class="slds-align_absolute-center">
+                    <img style="height:45vw;" src={smartTech}>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" class="slds-p-left_medium slds-p-top_large">
+                    <b style="font-size: 6vw;">Smart Technology</b><br><br>
+                    <p style="font-size: 4vw;">In just 20 minutes get clean, shinny and sparking Car!!</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div style="background-color: rgb(255, 170, 10); color: rgb(18, 17, 17);">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="6" class="slds-align_absolute-center">
+                    <img style="height:45vw;" src={qualityWork}>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" class="slds-p-left_medium slds-p-top_large">
+                    <b style="font-size: 6vw;">Quality Work</b><br><br>
+                    <p style="font-size: 4vw;">Our brand is changing the way people think about vehicle cleaning.</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="6" class="slds-align_absolute-center">
+                    <img style="height:45vw;" src={cleaningLogo}>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" class="slds-p-left_medium slds-p-top_large">
+                    <b style="font-size: 6vw;">Detailed Cleaning</b><br><br>
+                    <p style="font-size: 4vw;">We provide detailed interior and exterior cleaning of your vehicle.</p>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div><br>
+    </template>
+    <template if:true={isDesktop}>
+        <div style={backgroundStyleDesktop} class="slds-align_absolute-center slds-home-slogan-desktop slds-p-left_small slds-p-right_small slds-text-align_center">
+            Spotless Shine, Every Time
+        </div>
+        <div style="background-color: white;">
+            <div class="slds-m-left_large"><br><br>
+                <lightning-layout>
+                    <lightning-layout-item size="8">
+                        <div class="slds-border-right">
+                            <div class="slds-name-desktop slds-p-left_large">
+                                Moraya Hightech <br> Washing Center
+                            </div><br><br>
+                            <div class="slds-body-desktop slds-p-left_large">
+                                <p>Moraya Hightech Washing Center located at Ahmednagar-Kalyan</p>
+                                <p>road, Nefti Phata. Our wide service offerings make your vehicle</p>
+                                <p>wash experience the best it can be!</p>
+                            </div><br><br>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4">
+                        <div style="background-color: white;">
+                            <span><br><br>
+                                <img style="height:60px;" class="slds-p-left_large" src={vaccumLogo}>
+                                <p class="slds-abstract-detail-desktop slds-p-left_large">Free Vacuums</p><br><br>
+                                <img style="height:60px;" class="slds-p-left_large" src={moistureLogo}>
+                                <p class="slds-abstract-detail-desktop slds-p-left_large">Moisture Absorbing Towels <br> Available</p>
+                            </span>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+        <div style="background-color: white;"><br><br></div>
+        <div class="slds-p-left_large" style="background-color:  rgb(18, 17, 17);">
+            <br>
+            <lightning-layout>
+                <lightning-layout-item size="4"></lightning-layout-item>
+                <lightning-layout-item size="8" padding="around-small" class="slds-reason-heading-desktop">
+                    <b class="slds-p-left_medium">Why Our <span style="color: rgb(255, 170, 10)">Customers Love Us</span></b>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br>
+        </div>
+        <div style="background-color: white;"><br><br></div>
+        <lightning-layout>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);"><br>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" style="background-color: rgb(255, 170, 10); color: rgb(18, 17, 17);"><br>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);"><br>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);">
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-align_absolute-center">
+                        <img style="height:160px;" src={smartTech}>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-left_medium slds-p-top_large">
+                        <b class="slds-p-right_small" style="font-size: 28px;">Smart Technology</b><br><br>
+                        <p class="slds-p-right_small" style="font-size: 17px;">In just 20 minutes get clean, shinny and sparking Car!!</p>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" class="slds-p-top_medium" style="background-color: rgb(255, 170, 10); color: rgb(18, 17, 17);">
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-align_absolute-center slds-p-top_medium">
+                        <img style="height:160px;" src={qualityWork}>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-left_medium slds-p-top_large">
+                        <b class="slds-p-right_small" style="font-size: 28px;">Quality Work</b><br><br>
+                        <p class="slds-p-right_small" style="font-size: 17px;">Our brand is changing the way people think about vehicle cleaning.</p>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);">
+                <lightning-layout>
+                    <lightning-layout-item size="6" class="slds-align_absolute-center">
+                        <img style="height:160px;" src={cleaningLogo}>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" class="slds-p-left_medium slds-p-top_large">
+                        <b class="slds-p-right_small" style="font-size: 28px;">Detailed Cleaning</b><br><br>
+                        <p class="slds-p-right_small" style="font-size: 17px;">We provide detailed interior and exterior cleaning of your vehicle.</p>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);"><br>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" style="background-color: rgb(255, 170, 10); color: rgb(18, 17, 17);"><br>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);"><br>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);"><br>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" style="background-color: rgb(255, 170, 10); color: rgb(18, 17, 17);"><br>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" style="background-color: rgb(18, 17, 17); color: rgb(255, 170, 10);"><br>
+            </lightning-layout-item>
+        </lightning-layout>
+    </template>
+</template>
